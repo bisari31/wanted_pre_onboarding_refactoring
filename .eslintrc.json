@@ -18,6 +18,7 @@
     }
   },
   "rules": {
+    "react/function-component-definition": ["warn", { "namedComponents": "arrow-function" }],
     "arrow-body-style": "off",
     "semi": ["warn", "never"],
     "react/jsx-one-expression-per-line": "off",
