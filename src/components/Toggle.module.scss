@@ -2,27 +2,45 @@
 
 .wrapper {
   position: relative;
+  display: flex;
   width: 400px;
   height: 50px;
+  margin-top: 5em;
+  cursor: pointer;
   background-color: color.$GRAY;
   border-radius: 30px;
 
   .toggle {
     position: absolute;
-    right: 0;
+    top: 0;
+    left: 0;
     width: 50%;
     height: 100%;
     cursor: pointer;
-    background-color: red;
+    background-color: color.$WHITE;
+    border: 3px solid color.$GRAY;
     border-radius: 30px;
+    transition: 0.3s ease-in-out;
+    transform: translateX(0%);
+
+    &.clicked {
+      transform: translateX(100%);
+    }
   }
 
-  button {
+  .option {
+    z-index: 1;
+    display: flex;
     align-items: center;
+    justify-content: center;
     width: 50%;
     height: 100%;
     font-size: 1em;
-    font-weight: bold;
+    font-weight: 600;
     color: color.$LIGHT_FONT;
+
+    &.clicked {
+      color: color.$DARK_FONT;
+    }
   }
 }

@@ -9,11 +9,13 @@ const Toggle = () => {
   useEffect(() => {
     console.log(toggle)
   }, [toggle])
+
   return (
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div className={styles.wrapper} onClick={handleChangeToggle}>
-      <button type='button'>기본</button>
-      <button type='button'>상세</button>
+      <div className={cx('option', { clicked: !toggle })}>기본</div>
+      <div className={cx('option', { clicked: toggle })}>상세</div>
+      <div className={cx('toggle', { clicked: toggle })} />
     </div>
   )
 }
