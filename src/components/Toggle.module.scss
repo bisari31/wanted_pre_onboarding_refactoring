@@ -1,13 +1,14 @@
 @use '../styles/color';
+@use '../styles/size';
 
 .wrapper {
   position: relative;
   display: flex;
   width: 400px;
   height: 50px;
-  margin-top: 5em;
+  margin-top: size.$MARGIN_TOP;
   cursor: pointer;
-  background-color: color.$GRAY;
+  background-color: color.$LIGHT_GRAY;
   border-radius: 30px;
 
   .toggle {
@@ -18,7 +19,7 @@
     height: 100%;
     cursor: pointer;
     background-color: color.$WHITE;
-    border: 3px solid color.$GRAY;
+    border: 3px solid color.$LIGHT_GRAY;
     border-radius: 30px;
     transition: 0.3s ease-in-out;
     transform: translateX(0%);
@@ -37,10 +38,10 @@
     height: 100%;
     font-size: 1em;
     font-weight: 600;
-    color: color.$LIGHT_FONT;
+    color: color.$GRAY;
 
     &.clicked {
-      color: color.$DARK_FONT;
+      color: color.$DARK_GRAY;
     }
   }
 }
