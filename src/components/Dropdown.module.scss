@@ -1,0 +1,78 @@
+@use '../styles/size';
+@use '../styles/color';
+
+.wrapper {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: size.$MARGIN_TOP;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.4em 0.4em 0.4em 1em;
+  color: color.$DARK_GRAY;
+  text-align: left;
+  border: 1px solid color.$LIGHT_GRAY;
+  border-radius: 5px;
+
+  svg {
+    position: absolute;
+    right: 1em;
+    font-size: 0.8rem;
+  }
+}
+
+.optionWrapper {
+  position: relative;
+
+  .inputForm {
+    position: relative;
+
+    .search {
+      position: absolute;
+      top: 0.4em;
+      width: 100%;
+      padding: 0.4em 0.4em 0.4em 2.3em;
+      font-size: 0.8rem;
+      color: color.$DARK_GRAY;
+      text-align: left;
+      border: 1px solid color.$LIGHT_GRAY;
+      border-radius: 5px 5px 0 0;
+
+      &::placeholder {
+        color: color.$GRAY;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 1.2em;
+      left: 1em;
+      font-size: 0.8rem;
+      color: color.$GRAY;
+    }
+  }
+
+  .categoryWrapper {
+    position: absolute;
+    top: 2.8em;
+    width: 100%;
+    font-size: 0.8rem;
+    border: 1px solid color.$LIGHT_GRAY;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .category {
+    padding: 0.6em 0.4em 0.6em 2.3em;
+    color: color.$DARK_GRAY;
+    cursor: pointer;
+
+    &:hover {
+      background-color: color.$LIGHT_GRAY;
+    }
+  }
+}
