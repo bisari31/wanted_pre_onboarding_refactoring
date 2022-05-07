@@ -1,0 +1,66 @@
+@use '../styles/color';
+@use '../styles/size';
+
+.wrapper {
+  display: flex;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: size.$MARGIN_TOP;
+
+  .form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .label {
+    width: 100%;
+    font-size: 0.8rem;
+    color: color.$DARK_GRAY;
+  }
+
+  .input {
+    width: 100%;
+    padding: 0.4em 2.2em 0.4em 0.4em;
+    margin-top: 0.2em;
+    margin-bottom: 0.8em;
+    border: 1px solid color.$LIGHT_GRAY;
+    border-radius: 5px;
+
+    &:focus {
+      border: 1px solid color.$DARK_GRAY;
+    }
+  }
+
+  .errMsg {
+    position: relative;
+    top: -0.5em;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 0.7em;
+    color: rgb(227, 51, 51);
+  }
+
+  svg {
+    position: absolute;
+    right: 0.5em;
+    font-size: 1.2rem;
+    color: color.$GRAY;
+
+    &.checked {
+      color: color.$MINT;
+    }
+  }
+
+  svg:first-of-type {
+    top: 1.3em;
+  }
+
+  svg:last-of-type {
+    bottom: 1.3em;
+    cursor: pointer;
+  }
+}
