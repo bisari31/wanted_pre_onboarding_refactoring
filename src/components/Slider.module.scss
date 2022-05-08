@@ -1,0 +1,98 @@
+@use '../styles/size';
+@use '../styles/color';
+
+.wrapper {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: size.$MARGIN_TOP;
+
+  .screen {
+    padding: 1.5em;
+    background-color: #f9f9f9;
+    border: 1px solid color.$LIGHT_GRAY;
+    border-radius: 5px;
+
+    span {
+      display: flex;
+      justify-content: flex-end;
+      font-weight: bold;
+      color: rgb(47, 47, 47);
+
+      &::after {
+        margin-left: 1em;
+        color: color.$GRAY;
+        content: '%';
+      }
+    }
+  }
+
+  .rangeWrapper {
+    position: relative;
+    width: 100%;
+
+    .range {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      height: 5px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+      z-index: 3;
+      box-sizing: content-box;
+      width: 13px;
+      height: 13px;
+      background-color: color.$MINT;
+      border: 0;
+      border: 2px solid color.$WHITE;
+      border-radius: 50%;
+      box-shadow: 2px 2px 9px -1px rgba(0, 0, 0, 20%);
+      -webkit-appearance: none; /* 기본 스타일을 사용할지 말지 정하기 */
+    }
+
+    .circleWrapper {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        position: relative;
+        top: 19px;
+        left: 0;
+        z-index: 1;
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        pointer-events: none;
+        background-color: color.$LIGHT_GRAY;
+        border-radius: 50%;
+
+        &.on {
+          background-color: color.$MINT;
+        }
+      }
+    }
+  }
+
+  .btnWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1em;
+
+    .numberBtn {
+      width: 40px;
+      height: 20px;
+      font-size: 0.6rem;
+      color: color.$GRAY;
+      background-color: color.$LIGHT_GRAY;
+      border-radius: 15px;
+
+      &:hover {
+        color: color.$WHITE;
+        background-color: color.$MINT;
+      }
+    }
+  }
+}
