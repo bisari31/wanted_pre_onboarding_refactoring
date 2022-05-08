@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind'
-import { useMemo, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import styles from './Tab.module.scss'
 
 const Tab = () => {

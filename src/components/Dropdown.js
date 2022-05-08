@@ -36,7 +36,6 @@ const Dropdown = () => {
     )
   }
   const handleClickOutSide = (e) => {
-    console.log(categoryRef.current.contains(e.target))
     if (viewOptions && !categoryRef.current.contains(e.target)) {
       setViewOptions(false)
       setOptions([...CATEGORY])

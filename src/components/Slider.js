@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind'
-import React, { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import styles from './Slider.module.scss'
 
 const NUMBERS = [1, 25, 50, 75, 100]

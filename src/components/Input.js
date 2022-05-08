@@ -19,7 +19,6 @@ const Input = () => {
     setForm((prev) => {
       return { ...prev, [name]: value }
     })
-    console.log(form)
   }
   const isEmail = (mail) => {
     const regx = /^[a-zA-Z0-9.-_]{2,}@[a-zA-Z0-9]+\.[a-zA-Z0-9]+[.a-zA-Z0-9]*/
@@ -36,7 +35,6 @@ const Input = () => {
   }
   useEffect(() => {
     isEmail(email)
-    console.log(validate)
   }, [email, form, validate])
   const handleShowPassword = () => setShowPassword((prev) => !prev)
   return (
